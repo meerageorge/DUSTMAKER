@@ -112,13 +112,13 @@ Houdini 15.5 supports Pyside by default.
 	        	self.robot_radio_btn=QtGui.QRadioButton(self)
 	        	self.btngp1.addButton(self.robot_radio_btn)
 
-	    6. There are push buttons to do simulation of dust of selected character and 
-	    a reset to clear previous simulation
+	    	6. There are push buttons to do simulation of dust of selected character and 
+	    	a reset to clear previous simulation
 	        	self.sim_btn=QtGui.QPushButton("SIM",self)
 	        	self.sim_btn.clicked.connect(self.sim_btn_click)
 	        	hou.parm('/obj/dust_emitter/DUST_PARM/SIM').pressButton()
 
-	    7. There is a density multiplier to vary density of dust even after simulation
+	    	7. There is a density multiplier to vary density of dust even after simulation
 	        	self.density_mult_slider=QtGui.QSlider(self)
 	        	self.density_mult_slider.setOrientation(QtCore.Qt.Horizontal)
 	        	self.density_mult_value = QtGui.QDoubleSpinBox(self)
