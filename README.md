@@ -98,7 +98,8 @@ Houdini 15.5 supports Pyside by default.
 				Or if it is an expression:
 				parameter.setExpression(“expression”)
 				
-		5. Create dop network to do dust simulation and is imported by creating dopio node
+		5. Creates a dop network to do dust simulation and 
+		the result of it, is later imported by using a dop io node
 
 		6. The dopio preset parameter is set using:
 				dopioprsts={"node":dopio, "script_value0":"pyro"}
@@ -106,11 +107,11 @@ Houdini 15.5 supports Pyside by default.
 
 ## Creation of GUI:
 		
-		1. An otl is imported to change they density of dust and visualization
+		1. An otl is imported to change the density of dust and visualization
 			hou.hda.installFile("/SCORPION/PYTHON/WALK_DUST/FINAL_CODE/DUST_PARMS.otl")
 			gui_parm_nodes=cntxt.createNode("DUST_PARMS","DUST_PARM")
 
-		2. Created graphical user interface with pyside
+		2. I have created a graphical user interface for this tool with pyside
 
 		3. Window title is 'DUST MAKER' with a horse gallop icon
 
