@@ -40,6 +40,7 @@ Houdini 15.5 supports Pyside by default.
 		just combine all kinds of walk cycle from one point to another and of different
 		characters on to a switch node and out its path to a new object merge in a 
 		geometry node
+
 		2.The Tool also allows it to manually modify the dust parameters.
 
 		3.The Tool works with all form of character with any number of legs or can even 
@@ -55,9 +56,11 @@ Houdini 15.5 supports Pyside by default.
 
 ## STEPS:
 
-		1. Create an object merge inside a geo node. Give the path of the animation out to the obj path of object merge
+		1. Create an object merge inside a geo node. Give the path of the animation out 
+		to the obj path of object merge
 
-		2. Click on the ‘IMPORT_ALL_DUST_CHAR_FILES’ shelf tool. It create node inside the geo node and will name the geo node 'dust_emitter'
+		2. Click on the ‘IMPORT_ALL_DUST_CHAR_FILES’ shelf tool. It create node inside 
+		the geo node and will name the geo node 'dust_emitter'
 				parentnode.setName("dust_emitter") 
 				
 ## dust_emitter creation:
