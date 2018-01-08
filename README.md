@@ -5,7 +5,7 @@
 
 ## Description:
 
-## Department: FX
+#### Department: FX
 
 This tool was created for any form of contact dust.Character/s could be walking or 
 running.This tool can also work with a crowd system. This was initially based on a 
@@ -38,7 +38,8 @@ they would like to run the dust maker on.
 ## Prerequisites
 This tool is built for Houdini
 It is tested on Linux and OSX
-This code is written using Python 2.7 and PySide
+This code is written using Python 2.7 and PySide.
+
 Houdini 15.5 supports Pyside by default.
 
 
@@ -46,7 +47,11 @@ Houdini 15.5 supports Pyside by default.
 ## Features of the tool
 
 		1. This Tool allows FX department to create dust simulations with minimal
-		artistic involvement.This task can be automated further to run from a shell on batch mode. This would mean fx can concentrate on more complex elements instead of repetitive fx like foot dust.
+		artistic involvement.This task can be automated further to run from 
+		a shell on batch mode. 
+		
+		This would mean fx can concentrate on more complex elements 
+		instead of repetitive fx like foot dust.
 		
 		2. This Tool can work with crowds as well.
 
