@@ -93,7 +93,8 @@ Houdini 15.5 supports Pyside by default.
 ## Creation of GUI:
 		
 		1. An otl is improted to change they density of dust and visualitation
-			hou.hda.installFile("/SCORPION/PYTHON/WALK_DUST/FINAL_CODE/DUST_PARMS.otl")gui_parm_nodes=cntxt.createNode("DUST_PARMS","DUST_PARM")
+			hou.hda.installFile("/SCORPION/PYTHON/WALK_DUST/FINAL_CODE/DUST_PARMS.otl")
+			gui_parm_nodes=cntxt.createNode("DUST_PARMS","DUST_PARM")
 
 		2. Created graphical user interface with pyside
 
