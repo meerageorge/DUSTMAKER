@@ -88,7 +88,8 @@ Houdini 15.5 supports Pyside by default.
 
 		2. Window title is 'DUST MAKER' with a horse gallop icon
 
-		3. Has some labels for selecting the character animation and selecting the display of simulation.
+		3. Has some labels for selecting the character animation and selecting the
+		display of simulation.
 
 		Size and position of label is set using setGeometry. 
 		Text color style is done by setStyleSheet
