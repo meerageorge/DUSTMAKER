@@ -73,8 +73,8 @@ Houdini 15.5 supports Pyside by default.
 
 		1. Create an object merge inside a geo node with path of animation.
 
-		2. Click on the ‘IMPORT_ALL_DUST_CHAR_FILES’ shelf tool. It create node inside 
-		the geo node and will name the geo node as 'dust_emitter'
+		2. Click on the ‘IMPORT_ALL_DUST_CHAR_FILES’ shelf tool. It creates
+		all the necessary nodes inside a geo node which is later renamed as 'dust_emitter'
 				parentnode.setName("dust_emitter") 
 				
 ## dust_emitter creation:
