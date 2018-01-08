@@ -7,14 +7,14 @@
 
 ## Department: FX
 
-This tool was created for any form of contact dust.Charecter/s could be walking or 
+This tool was created for any form of contact dust.Character/s could be walking or 
 running.This tool can also work with a crowd system. This was initially based on a 
-requirement for shots which involed repeated walk cycles of different kinds of animals.
-The selection of charecter/s is made with the help of a GUI.
+requirement for shots which involved repeated walk cycles of different kinds of animals.
+The selection of character/s is made with the help of a GUI.
 
 ground plane calculation:
 If there is no ground plane available from layout,
-This tool can also caluculate a ground plane based on walk cycle of the charecter.
+This tool can also calculate a ground plane based on walk cycle of the character/s.
 
 
 ## Getting Started
@@ -27,12 +27,12 @@ This code is split based on 2 shelf tools:
 		2. Building GUI - to switch between the character 
 
 ## Creating dust 
-the first tool would create all the sop nodes and a dop network requitred to 
+the first tool would create all the sop nodes and a dop network required to 
 create the dust simulation.
 
 ## Building the GUI
-I have tested the dust maker with a variety of charecters with diffrent animations.
-The second tool opens a GUI from which user can change which charecter/animation
+I have tested the dust maker with a variety of characters with different animations.
+The second tool opens a GUI from which user can change which character / animation
 they would like to run the dust maker on.
 
 ## Prerequisites
@@ -46,21 +46,21 @@ Houdini 15.5 supports Pyside by default.
 ## Features of the tool
 
 		1. This Tool allows FX department to create dust simulations with minimal
-		artistic involvement.This task can be automated futher to run from a shell on batch mode. This would mean fx can concentrate on more complex elements instead of repeative fx like foot dust.
+		artistic involvement.This task can be automated further to run from a shell on batch mode. This would mean fx can concentrate on more complex elements instead of repetitive fx like foot dust.
 		
-		2. This Tool can work with crowds aswell.
+		2. This Tool can work with crowds as well.
 
-		3. Automatic ground calcualtion means that fx can try the setup with rough 
+		3. Automatic ground calculation means that fx can try the setup with rough 
 		animation even before layout has actually setup a ground plane
 
-		4. The tool automatically resizes container size based on charecter size and 
+		4. The tool automatically resizes container size based on character size and 
 		motion to keep the sim super light weight to calculate. 
 
-		5. The UI has option to jump between diffrent charecters/animation
+		5. The UI has option to jump between different characters / animation
 
-		6. There are controlls of user to simulate / reset the sim
+		6. There are controls of user to simulate / reset the sim
 		
-		7. The UI allows user to visualize densit/velcoity/contact points of emission
+		7. The UI allows user to visualize density / velocity / contact points of emission
 
 		8. There is a post sim density control in the GUI.
 
@@ -80,16 +80,16 @@ Houdini 15.5 supports Pyside by default.
 				if len(sel_node) < 1:
 		   			 hou.ui.displayMessage('select a node')
 		   		if node.type().name()!="object_merge":
-            		hou.ui.displayMessage("wrong node selected\nplease select an object_merge")
+            		hou.ui.displayMessage("wrong node selected \n please select an object_merge")
 					 
 		2. Create nodes 
-				node=geo.createNode("xform")
+				node = geo.createNode("xform")
 				
 		3. Set input to all created nodes
 				node.setInput(0,node)
 				
 		4. Set parameter of nodes
-				parameter=node.parm(“parm_name”)
+				parameter = node.parm(“parm_name”)
 				parameter.set(value)
 				Or if it is an expression:
 				parameter.setExpression(“expression”)
@@ -102,7 +102,7 @@ Houdini 15.5 supports Pyside by default.
 
 ## Creation of GUI:
 		
-		1. An otl is improted to change they density of dust and visualitation
+		1. An otl is imported to change they density of dust and visualization
 			hou.hda.installFile("/SCORPION/PYTHON/WALK_DUST/FINAL_CODE/DUST_PARMS.otl")
 			gui_parm_nodes=cntxt.createNode("DUST_PARMS","DUST_PARM")
 
@@ -119,7 +119,7 @@ Houdini 15.5 supports Pyside by default.
 				self.robot_label.setGeometry(15,30,50,35)
 				self.robot_label.setStyleSheet("QLabel{color:rgb(230,190,138)}")
 		5. Two radio button groups are used.
-		One group helps to select animation and another helps to select visualisation
+		One group helps to select animation and another helps to select visualization
 	        	self.btngp1=QtGui.QButtonGroup(self)
 	        	self.robot_radio_btn=QtGui.QRadioButton(self)
 	        	self.btngp1.addButton(self.robot_radio_btn)
