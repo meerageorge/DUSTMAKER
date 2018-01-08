@@ -1,31 +1,40 @@
 # DUSTMAKER
 
+		Reel : ( https://vimeo.com/249388964 )
+		Password: reel2018
+
 ## Description:
 
 ## Department: FX
 
-For shots that need to emit dust from the ground when some charater is walking or running or animated from one point to another in anyway we can use this tool. This was done based on a requirement for shots which involed repeated walk cycles of different kinds of animals
+This tool was created for any form of contact dust.Charecter/s could be walking or 
+running.This tool can also work with a crowd system. This was initially based on a 
+requirement for shots which involed repeated walk cycles of different kinds of animals.
+The selection of charecter/s is made with the help of a GUI.
 
-So for that the walk cycle of the all characters was called and made it possible to switch the character and do the dust simulation based on which character dust was 
-required. The selection of walk cycle was made little more with the help of a GUI. This tool does not require a ground plane. It is automatically calculated.
+ground plane calculation:
+If there is no ground plane available from layout,
+This tool can also caluculate a ground plane based on walk cycle of the charecter.
 
 
 ## Getting Started
-We need animated scene file of charcter or characters and a geo node having an object merge which contains the path of the walk cycle.
-This shelf tool has 2 parts:
+We need an object merge which contains the path of the walk cycle.
 
-		1. creating dust for the walk cycle
+This code is split based on 2 shelf tools:
+
+		1. creating dust based on imported walk cycle
 
 		2. Building GUI - to switch between the character 
 
 ## Creating dust 
-Create an object merge inside a geo node. Give the path of animation out node in the obj path of object merge and select the object merge and click the shelf tool.
-It will create some nodes and a dop network to create dust simulation and also create a dopio node to import the simulation.
+the first tool would create all the sop nodes and a dop network requitred to 
+create the dust simulation.
 
 ## Building the GUI
-This part is to graphically change the character of animation and change the visualisation of simulation of dust like velocity or bounding box or source.
-Inaddition to that I have tried to change density of dust after simulation.
-    
+I have tested the dust maker with a variety of charecters with diffrent animations.
+The second tool opens a GUI from which user can change which charecter/animation
+they would like to run the dust maker on.
+
 ## Prerequisites
 This tool is built for Houdini
 It is tested on Linux and OSX
@@ -36,31 +45,32 @@ Houdini 15.5 supports Pyside by default.
 
 ## Features of the tool
 
-		1.The Tool allows FX department to create dust simulation on clicking it after
-		just combine all kinds of walk cycle from one point to another and of different
-		characters on to a switch node and out its path to a new object merge in a 
-		geometry node
+		1. This Tool allows FX department to create dust simulations with minimal
+		artistic involvement.This task can be automated futher to run from a shell on batch mode. This would mean fx can concentrate on more complex elements instead of repeative fx like foot dust.
+		
+		2. This Tool can work with crowds aswell.
 
-		2.The Tool also allows it to manually modify the dust parameters.
+		3. Automatic ground calcualtion means that fx can try the setup with rough 
+		animation even before layout has actually setup a ground plane
 
-		3.The Tool works with all form of character with any number of legs or can even 
-		work for moving objects
+		4. The tool automatically resizes container size based on charecter size and 
+		motion to keep the sim super light weight to calculate. 
 
-		4.The Tool allows the user to switch the character and animation.
+		5. The UI has option to jump between diffrent charecters/animation
 
-		5.The Tool has additional change the visualisation of velocity, density or bounds 
-		or contact points
+		6. There are controlls of user to simulate / reset the sim
+		
+		7. The UI allows user to visualize densit/velcoity/contact points of emission
 
-		6.The Tool automatically ensures that dust is generated only from contact points 
-		and is visible as long as it is completely dissipated
+		8. There is a post sim density control in the GUI.
+
 
 ## STEPS:
 
-		1. Create an object merge inside a geo node. Give the path of the animation out 
-		to the obj path of object merge
+		1. Create an object merge inside a geo node with path of animation.
 
 		2. Click on the ‘IMPORT_ALL_DUST_CHAR_FILES’ shelf tool. It create node inside 
-		the geo node and will name the geo node 'dust_emitter'
+		the geo node and will name the geo node as 'dust_emitter'
 				parentnode.setName("dust_emitter") 
 				
 ## dust_emitter creation:
