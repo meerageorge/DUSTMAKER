@@ -91,12 +91,14 @@ Houdini 15.5 supports Pyside by default.
 				dopio.hm().invokePresetMenu(dopioprsts) 
 
 ## Creation of GUI:
+		
+		1. An otl is improted to change they density of dust and visualitation
 
-		1. Created graphical user interface with pyside
+		2. Created graphical user interface with pyside
 
-		2. Window title is 'DUST MAKER' with a horse gallop icon
+		3. Window title is 'DUST MAKER' with a horse gallop icon
 
-		3. Has some labels for selecting the character animation and selecting the
+		4. Has some labels for selecting the character animation and selecting the
 		display of simulation.
 
 		Size and position of label is set using setGeometry. 
@@ -104,20 +106,19 @@ Houdini 15.5 supports Pyside by default.
 				self.robot_label=QtGui.QLabel("ROBOT",self)
 				self.robot_label.setGeometry(15,30,50,35)
 				self.robot_label.setStyleSheet("QLabel{color:rgb(230,190,138)}")
-
-	        4. Two radio button groups are used.
-	        One group helps to select animation and another helps to select visualisation
+		5. Two radio button groups are used.
+	    One group helps to select animation and another helps to select visualisation
 	        	self.btngp1=QtGui.QButtonGroup(self)
 	        	self.robot_radio_btn=QtGui.QRadioButton(self)
 	        	self.btngp1.addButton(self.robot_radio_btn)
 
-	        5. There are push buttons to do simulation of dust of selected character and 
-	        a reset to clear previous simulation
+	    6. There are push buttons to do simulation of dust of selected character and 
+	    a reset to clear previous simulation
 	        	self.sim_btn=QtGui.QPushButton("SIM",self)
 	        	self.sim_btn.clicked.connect(self.sim_btn_click)
 	        	hou.parm('/obj/dust_emitter/DUST_PARM/SIM').pressButton()
 
-	        6. There is a density multiplier to vary density of dust even after simulation
+	    7. There is a density multiplier to vary density of dust even after simulation
 	        	self.density_mult_slider=QtGui.QSlider(self)
 	        	self.density_mult_slider.setOrientation(QtCore.Qt.Horizontal)
 	        	self.density_mult_value = QtGui.QDoubleSpinBox(self)
