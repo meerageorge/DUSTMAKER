@@ -47,9 +47,8 @@ Houdini 15.5 supports Pyside by default.
 ## Features of the tool
 
 		1. This Tool allows FX department to create dust simulations with minimal
-		artistic involvement.This task can be automated further to run from 
-		a shell on batch mode. 
-		
+		artistic involvement.This task can be automated further to run from a shell on batch mode. 
+
 		This would mean fx can concentrate on more complex elements 
 		instead of repetitive fx like foot dust.
 		
