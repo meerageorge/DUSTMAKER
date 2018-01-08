@@ -36,17 +36,22 @@ Houdini 15.5 supports Pyside by default.
 
 ## Features of the tool
 
-		1.The Tool allows FX department to create dust simulation on clicking it after just combine all kinds of walk cycle from one point to another and of different characters on to a switch node and out its path to a new object merge in a geometry node
+		1.The Tool allows FX department to create dust simulation on clicking it after
+		just combine all kinds of walk cycle from one point to another and of different
+		characters on to a switch node and out its path to a new object merge in a 
+		geometry node
 		2.The Tool also allows it to manually modify the dust parameters.
 
-		3.The Tool works with all form of character with any number of legs or can even work for moving objects
+		3.The Tool works with all form of character with any number of legs or can even 
+		work for moving objects
 
 		4.The Tool allows the user to switch the character and animation.
 
 		5.The Tool has additional change the visualisation of velocity, density or bounds 
 		or contact points
 
-		6.The Tool automatically ensures that dust is generated only from contact points and is visible as long as it is completely dissipated
+		6.The Tool automatically ensures that dust is generated only from contact points 
+		and is visible as long as it is completely dissipated
 
 ## STEPS:
 
