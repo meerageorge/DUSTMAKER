@@ -107,7 +107,7 @@ Houdini 15.5 supports Pyside by default.
 				self.robot_label.setGeometry(15,30,50,35)
 				self.robot_label.setStyleSheet("QLabel{color:rgb(230,190,138)}")
 		5. Two radio button groups are used.
-	    One group helps to select animation and another helps to select visualisation
+		One group helps to select animation and another helps to select visualisation
 	        	self.btngp1=QtGui.QButtonGroup(self)
 	        	self.robot_radio_btn=QtGui.QRadioButton(self)
 	        	self.btngp1.addButton(self.robot_radio_btn)
